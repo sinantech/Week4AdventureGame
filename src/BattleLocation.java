@@ -62,9 +62,18 @@ public class BattleLocation extends Location {
 
             if (this.getNewEnemy().getEnemyHealth() < this.getNewPlayer().getPlayerHealth()) {
                 System.out.println("You Killed The Enemy !");
-                System.out.println("Loot : " + this.getNewEnemy().getEnemyGold() + " " + "Gold");
+                System.out.println("Gold : " + this.getNewEnemy().getEnemyGold() + " " + "Gold");
+                System.out.println("Food : " + this.getNewEnemy().getEnemyFood() + " " + "Food");
+                System.out.println("Water : " + this.getNewEnemy().getEnemyWater() + " " + "Water");
+                System.out.println("Wood : " + this.getNewEnemy().getEnemyWood() + " " + "Wood");
                 this.getNewPlayer().setPlayerGold(this.getNewPlayer().getPlayerGold() + this.getNewEnemy().getEnemyGold());
-                System.out.println("Your Loot : " + this.getNewPlayer().getPlayerGold());
+                this.getNewPlayer().setPlayerFood(this.getNewPlayer().getPlayerFood() + this.getNewEnemy().getEnemyFood());
+                this.getNewPlayer().setPlayerWater(this.getNewPlayer().getPlayerWater() + this.getNewEnemy().getEnemyWater());
+                this.getNewPlayer().setPlayerWood(this.getNewPlayer().getPlayerWood() + this.getNewEnemy().getEnemyWood());
+                System.out.println("Your Gold : " + this.getNewPlayer().getPlayerGold());
+                System.out.println("Your Food : " + this.getNewPlayer().getPlayerFood());
+                System.out.println("Your Water : " + this.getNewPlayer().getPlayerWater());
+                System.out.println("Your Wood : " + this.getNewPlayer().getPlayerWood());
             } else {
                 return false;
             }
@@ -85,7 +94,11 @@ public class BattleLocation extends Location {
         System.out.println("Enemy Name : " + this.getNewEnemy().getEnemyName());
         System.out.println("Enemy Health : " + this.getNewEnemy().getEnemyHealth());
         System.out.println("Enemy Damage : " + this.getNewEnemy().getEnemyDamage());
+        System.out.println("Enemy Food : " + this.getNewEnemy().getEnemyFood());
+        System.out.println("Enemy Water : " + this.getNewEnemy().getEnemyWater());
+        System.out.println("Enemy Wood : " + this.getNewEnemy().getEnemyWood());
         System.out.println("Enemy Gold : " + this.getNewEnemy().getEnemyGold());
+        System.out.println();
     }
 
     public void playerStats() {
@@ -97,6 +110,9 @@ public class BattleLocation extends Location {
         System.out.println("Player Block : " + this.getNewPlayer().getInventory().getArmor().getArmorBlock());
         System.out.println("Player Damage : " + this.getNewPlayer().getTotalDamage());
         System.out.println("Player Gold : " + this.getNewPlayer().getPlayerGold());
+        System.out.println("Player Food : " + this.getNewPlayer().getPlayerFood());
+        System.out.println("Player Water : " + this.getNewPlayer().getPlayerWater());
+        System.out.println("Player Wood : " + this.getNewPlayer().getPlayerWood());
         System.out.println();
 
     }
