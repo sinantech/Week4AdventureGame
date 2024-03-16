@@ -85,7 +85,7 @@ public class BattleLocation extends Location {
         System.out.println("Enemy Name : " + this.getNewEnemy().getEnemyName());
         System.out.println("Enemy Health : " + this.getNewEnemy().getEnemyHealth());
         System.out.println("Enemy Damage : " + this.getNewEnemy().getEnemyDamage());
-        System.out.println("Enemy Loot : " + this.getNewEnemy().getEnemyGold());
+        System.out.println("Enemy Gold : " + this.getNewEnemy().getEnemyGold());
     }
 
     public void playerStats() {

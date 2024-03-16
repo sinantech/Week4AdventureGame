@@ -5,6 +5,9 @@ public class Player {
     private int playerHealth;
     private int defaultPlayerHealth;
     private int playerGold;
+    private int playerFood;
+    private int playerWater;
+    private int playerWood;
     private String playerName;
     private String playerCharName;
     private Scanner select = new Scanner(System.in);
@@ -25,6 +28,9 @@ public class Player {
                     "\t GameCharacter :" + gameCharacter.getCharName() +
                     "\t Damage :" + gameCharacter.getCharDamage() +
                     "\t Health : " + gameCharacter.getCharHealth() +
+                    "\t Food : " + gameCharacter.getCharFood() +
+                    "\t Water : " + gameCharacter.getCharWater()+
+                    "\t Wood : " + gameCharacter.getCharWood() +
                     "\t Gold :" + gameCharacter.getCharGold());
 
         }
@@ -48,6 +54,9 @@ public class Player {
         System.out.println("Character : " + this.getPlayerCharName() +
                 " " + "Damage : " + this.getPlayerDamage() +
                 " " + "Health : " + this.getPlayerHealth() +
+                " " + "Food : " + this.getPlayerFood() +
+                " " + "Water : " + this.getPlayerWater() +
+                " " + "Wood : " + this.getPlayerWood() +
                 " " + "Gold : " + this.getPlayerGold());
     }
 
@@ -62,6 +71,9 @@ public class Player {
         this.setPlayerDamage(gameCharacter.getCharDamage());
         this.setPlayerHealth(gameCharacter.getCharHealth());
         this.setDefaultPlayerHealth(gameCharacter.getCharHealth());
+        this.setPlayerFood(gameCharacter.getCharFood());
+        this.setPlayerWater(gameCharacter.getCharWater());
+        this.setPlayerWood(gameCharacter.getCharWood());
         this.setPlayerGold(gameCharacter.getCharGold());
         this.setPlayerCharName(gameCharacter.getCharName());
     }
@@ -73,6 +85,9 @@ public class Player {
                         " " + "Block : " + this.getInventory().getArmor().getArmorBlock() +
                         " " + "Damage : " + this.getTotalDamage() +
                         " " + "Health : " + this.getPlayerHealth() +
+                        " " + "Food : " + this.getPlayerFood() +
+                        " " + "Water : " + this.getPlayerWater() +
+                        " " + "Wood : " + this.getPlayerWood() +
                         " " + "Gold : " + this.getPlayerGold());
 
     }
@@ -144,4 +159,27 @@ public class Player {
         this.defaultPlayerHealth = defaultPlayerHealth;
     }
 
+    public int getPlayerFood() {
+        return playerFood;
+    }
+
+    public void setPlayerFood(int playerFood) {
+        this.playerFood = playerFood;
+    }
+
+    public int getPlayerWater() {
+        return playerWater;
+    }
+
+    public void setPlayerWater(int playerWater) {
+        this.playerWater = playerWater;
+    }
+
+    public int getPlayerWood() {
+        return playerWood;
+    }
+
+    public void setPlayerWood(int playerWood) {
+        this.playerWood = playerWood;
+    }
 }
